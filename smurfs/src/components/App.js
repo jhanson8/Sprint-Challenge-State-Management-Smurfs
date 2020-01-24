@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Smurf from './Smurf.js';
-import NewPost from './NewSmurf.js';
+import CreatePost from './CreatePost.js';
 
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <h1>SMURFS! 2.0 W/ Redux</h1>
       <Smurf />
-      <NewPost/>
+      <CreatePost/>
       </div>
     );
   }

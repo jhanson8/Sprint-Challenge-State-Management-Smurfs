@@ -17,7 +17,8 @@ class NewPost extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     if (this.state.name.trim() && this.state.age.trim() && this.state.height.trim()) {
-      console.log(this.state);
+      // console.log(this.state);
+      this.props.onAddPost(this.state);
       this.handleReset();
     }
   };

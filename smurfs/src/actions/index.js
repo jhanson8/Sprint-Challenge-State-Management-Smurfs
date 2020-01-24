@@ -13,3 +13,29 @@ export const fetchSmurf = () => {
       .catch(err => console.log(err));
   };
 };
+
+
+const apiUrl = 'http://localhost:3333/smurfs';
+
+export const createPost = ({ name, age, height }) => {
+  return (dispatch) => {
+    return axios.post(`${apiUrl}`, {name, age, height})
+      .then(response => {
+        dispatch(createPostSuccess(response.data))
+      })
+      .catch(error => {
+        throw(error);
+      });
+  };
+};
+
+export const createPostSuccess =  (data) => {
+  return {
+    type: 'ADD_POST',
+    payload: {
+      name: data.name,
+      age: data.age ,
+      height: data.height
+    }
+  }
+};
