@@ -6,7 +6,7 @@ import { fetchSmurf } from '../actions';
 
 
 const Smurf = props => {
-  console.log(props);
+  console.log(props.smurf);
   return (
     <div>
       <button onClick={props.fetchSmurf}>Get Smurf</button>
@@ -23,8 +23,8 @@ const Smurf = props => {
         />
       )}
       <h3>Smurf Name & Info:</h3>
-
        {props.smurf && !props.isLoading && <h2>{props.smurf[0].name}</h2>}
+        {props.smurf && !props.isLoading && <h2>{props.smurf[1].name}</h2>}
 
     </div>
 

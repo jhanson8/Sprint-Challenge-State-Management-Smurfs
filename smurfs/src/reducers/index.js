@@ -24,8 +24,10 @@
 import { combineReducers } from 'redux';
 import { reducer } from './fetchReducer';
 import { postReducer } from './postReducer.js';
+import { displayReducer } from './displayReducer';
 
 export default combineReducers({
 reducer,
-  postReducer
+  postReducer,
+
 });

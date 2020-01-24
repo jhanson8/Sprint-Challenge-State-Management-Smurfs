@@ -4,6 +4,7 @@ import Smurf from './Smurf.js';
 import CreatePost from './CreatePost.js';
 
 
+
 class App extends Component {
   render() {
     return (
@@ -11,6 +12,7 @@ class App extends Component {
         <h1>SMURFS! 2.0 W/ Redux</h1>
       <Smurf />
       <CreatePost/>
+
       </div>
     );
   }
